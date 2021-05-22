@@ -16,6 +16,8 @@ message = input()
 vowels = ('a', 'e', 'i', 'o', 'u', 'y')
 
 pigLatin = [] # Blank list of the words in Pig Latin
+
+
 for word in message.split():
     # Seperate non-letters at start of word
     preNonLetters = ''
@@ -38,7 +40,7 @@ for word in message.split():
     
     word = word.lower() # make the word lowercase for translation
     
-    # Seperate the consonants at the start of word
+    # Seperate the consonants at the start of word (not vowels)
     preConsonants = ''
     while len(word) > 0 and not word[0] in vowels:
         preConsonants += word[0]
