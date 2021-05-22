@@ -19,12 +19,13 @@ pigLatin = [] # Blank list of the words in Pig Latin
 for word in message.split():
     # Seperate non-letters at start of word
     preNonLetters = ''
-    while len(word) > 0 and not word[0].isalpha(): 
+    while len(word) > 0 and not word[0].isalpha(): # While the start of the word is not an alpha (a letter), add to prenonletters
         preNonLetters += word[0]
         word = word[1:]
     if len(word) == 0:
-        pigLatin.append(preNonLetters)
+        pigLatin.append(preNonLetters) 
         continue
+    
     # Seperate the non letters at the end of the word
     endNonLetters = ''
     while not word[-1].isalpha():
@@ -40,7 +41,7 @@ for word in message.split():
     # Seperate the consonants at the start of word
     preConsonants = ''
     while len(word) > 0 and not word[0] in vowels:
-        preConsonants != word[0]
+        preConsonants += word[0]
         word = word[1:]
         
     # Add pig latin ending to the word
