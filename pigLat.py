@@ -33,8 +33,8 @@ for word in message.split():
         word = word[:-1]
     
     # Remember if word was upper or title
-    wasUpper = word.isupper()
-    wasTitle = word.istitle()
+    wasUpper = word.isupper() # All caps
+    wasTitle = word.istitle() # First letter caps
     
     word = word.lower() # make the word lowercase for translation
     
